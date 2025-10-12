@@ -1,32 +1,46 @@
-# Absenteeism at Work — Classificação Preditiva
+# 📊 Absenteeism at Work — Predictive Classification
+> 🇧🇷 Versão em Português disponível abaixo.
 
-## 📌 Descrição
-Este projeto investiga o **absenteísmo no trabalho** utilizando o dataset público **Absenteeism at Work** (UCI Repository).  
-O objetivo foi desenvolver um modelo de **Regressão Logística Multiclasse** capaz de classificar níveis de ausência (Nenhuma, Moderada, Alta) a partir de variáveis organizacionais, pessoais e laborais.
+## 📌 Description
 
-O estudo envolveu:  
-- **Análise Exploratória (EDA):** compreensão da distribuição das ausências, padrões sazonais e correlações entre variáveis;  
-- **Pré-processamento:** recategorização de motivos de ausência, normalização e codificação das variáveis;  
-- **Modelagem:** comparação entre cenários com dados originais desbalanceados e dados balanceados via **SMOTE**;  
-- **Avaliação:** uso de métricas como acurácia, precisão, recall, F1-score e matriz de confusão para cada classe.  
+This project investigates **workplace absenteeism** using the public dataset **Absenteeism at Work** from the **UCI Machine Learning Repository**.  
+The objective was to develop a **Multiclass Logistic Regression** model capable of classifying absence levels — **None**, **Moderate**, and **High** — based on organizational, personal, and occupational variables.
+
+The study involved:  
+- **Exploratory Data Analysis (EDA):** understanding absence distributions, seasonal patterns, and variable correlations;  
+- **Preprocessing:** recategorization of absence reasons, normalization, and variable encoding;  
+- **Modeling:** comparison between original unbalanced data and balanced data using **SMOTE**;  
+- **Evaluation:** assessment through metrics such as **accuracy**, **precision**, **recall**, **F1-score**, and **confusion matrix** for each class.  
 
 ---
 
-## 📊 Resultados
-- O modelo inicial (dados originais, `class_weight=balanced`) apresentou acurácia de **59,5%**, com bom desempenho na classe **Moderada**, mas baixa precisão na classe **Nenhuma**.  
-- Com o **SMOTE**, a acurácia global chegou a **61%**, e houve melhora nas classes minoritárias:  
-  - Classe 0 (No Absence): F1 = 0,27, Recall = 0,67  
-  - Classe 1 (Moderate Absence): F1 = 0,67  
-  - Classe 2 (High Absence): F1 = 0,68  
-- A comparação de acertos/erros evidenciou ganhos em todas as classes após o balanceamento.  
+## 📊 Results
 
-**Tabela comparativa (Original vs Balanceado):**
+- The initial model (original data, `class_weight=balanced`) achieved an overall **accuracy of 59.5%**, with solid performance for the **Moderate** class but lower precision for **No Absence**.  
+- After applying **SMOTE**, global accuracy improved to **61%**, with enhanced performance for minority classes:  
+  - Class 0 (No Absence): F1 = 0.27, Recall = 0.67  
+  - Class 1 (Moderate Absence): F1 = 0.67  
+  - Class 2 (High Absence): F1 = 0.68  
+- The comparison of correct and incorrect predictions showed consistent improvements across all classes after balancing.  
 
-| Classe | Acertos (Original) | Erros (Original) | Acertos (Balanceado) | Erros (Balanceado) |
-|--------|---------------------|------------------|-----------------------|--------------------|
-| 0 (No Absence)   | 7   | 2  | 6  | 3  |
-| 1 (Moderate)     | 45  | 38 | 48 | 35 |
-| 2 (High)         | 36  | 20 | 37 | 19 |
+**Performance Comparison (Original vs Balanced):**
+
+| Class | Correct (Original) | Incorrect (Original) | Correct (Balanced) | Incorrect (Balanced) |
+|--------|---------------------|----------------------|---------------------|----------------------|
+| 0 (No Absence)   | 7  | 2  | 6  | 3  |
+| 1 (Moderate)     | 45 | 38 | 48 | 35 |
+| 2 (High)         | 36 | 20 | 37 | 19 |
+
+---
+
+## 📈 Visualizations
+
+![Distribuition of Disciplinary Failure](plot_disciplinary_failure.png)
+![Confusion Matrix Comparison](logistic_regression_smote.png)  
+
+---
+
+💡 *Note:* This project is part of an academic study on predictive modeling for human resources analytics, combining data preprocessing, model evaluation, and class balancing techniques.  
 
 ---
 
