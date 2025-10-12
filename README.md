@@ -1,5 +1,4 @@
 # 📊 Absenteeism at Work — Predictive Classification
-> 🇧🇷 Versão em Português disponível abaixo.
 
 ## 📌 Description
 
