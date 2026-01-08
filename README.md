@@ -39,14 +39,14 @@ The balanced model demonstrated more consistent behavior across all classes, red
 
 The repository includes visual diagnostics used to support model selection and evaluation:
 
-![Distribution of Disciplinary Failure](plot_disciplinary_failure.png)
+![Distribution of Disciplinary Failure](images/plot_disciplinary_failure.png)
 
 The distribution of disciplinary failure highlights a strong imbalance in employee behavior, with the vast majority of records showing no disciplinary issues.
 This asymmetry reflects a common real-world HR scenario, where adverse behaviors are relatively rare but carry disproportionately higher organizational impact.
 From a modeling perspective, this imbalance reinforces the need for techniques that prevent minority patterns from being ignored during training, particularly when predicting higher-risk absenteeism profiles.
 
 
-![Confusion Matrix Comparison](logistic_regression_smote.png)
+![Confusion Matrix Comparison](images/logistic_regression_smote.png)
 
 The confusion matrix of the Logistic Regression model trained with SMOTE reveals a more balanced classification behavior across absence levels compared to the original dataset.
 
